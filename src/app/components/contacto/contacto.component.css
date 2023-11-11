@@ -1,0 +1,38 @@
+
+    #contacto h2 {
+        font-family: 'Optima';
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    #contacto p {
+        font-family: 'Optima';
+        font-size: 1rem;
+        color: #555;
+    }
+
+    #contacto ul {
+        font-family: 'Optima';
+        font-size: 1rem;
+        color: #555555;
+    }
+
+    #contacto label {
+        font-family: 'Optima';
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #000001;
+    }
+
+    #contacto input,
+    #contacto textarea {
+        font-family: 'Optima';
+        font-size: 1rem;
+    }
+
+    #contacto button {
+        font-family: 'Optima';
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
