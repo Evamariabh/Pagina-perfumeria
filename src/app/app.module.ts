@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,12 +9,17 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProductosComponent} from './components/productos/productos.component';
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import {AngularFireModule} from '@angular/fire/compat';
+import { ServiceWorkerModule } from '@angular/service-worker'
 
 const routes: Routes=[
   {path:'home', component:HomeComponent},
@@ -22,7 +27,8 @@ const routes: Routes=[
   {path:'register', component:RegisterComponent},
   {path:'productos', component:ProductosComponent},
   {path:'quienes-somos', component:QuienesSomosComponent},
-  {path:'contacto', component:ContactoComponent}
+  {path:'contacto', component:ContactoComponent},
+  {path:'dashboard', component:DashboardComponent}
   
 ]
 @NgModule({
@@ -35,6 +41,7 @@ const routes: Routes=[
     QuienesSomosComponent,
     FooterComponent,
     ContactoComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +49,21 @@ const routes: Routes=[
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
 
     RouterModule.forRoot(
       routes
-    )
-
+    ),
+     provideFirebaseApp(() => initializeApp(environment.firebase)),
+     provideAuth(() => getAuth()),
+     
+     AngularFireModule.initializeApp(environment.firebase),
+           
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,3 @@
-.calidad-text {
-    font-family: 'Brush Script MT', sans-serif; /* Reemplaza 'TuTipoDeLetra' con el tipo de letra que prefieras */
-    font-weight: bold;
-    padding: 5%;
-    font-size: 50px; /* Ajusta el tamaño según tus preferencias */
-    color: #ce69a9; /* Ajusta el color del texto según tus preferencias */
-    /* Otros estilos que desees agregar */
-  }
-  
   a {
     text-decoration: none;
     color: blue;
@@ -38,21 +29,6 @@
 
 }
 
-
-
-@keyframes cambiar-color{
-    from{
-        width: 100px;
-        background-color: rgb(113, 249, 39);
-    }
-    to{
-        width: 1000px;
-        background-color: rgb(254, 61, 254);
-    }
-}
-
-
-
 .transi2 {
     width: 200px;
     height: 70px;
@@ -64,16 +40,12 @@
     justify-content: center;
     
 }
+
 .transi2:hover{
     width: 100%;
     height: 200px;
     margin: 0 auto;
 }
-
-
-
-
-
 
 .columna {
     float: left;
@@ -83,7 +55,6 @@
     align-items: center;  
 }
 
-
 .fila::after {
     content: "";
     clear: both;
@@ -92,11 +63,12 @@
 
 .fila{
     display: flex;
-  justify-content: center;
+    justify-content: center;
 }
 .columna{
     display: flex;
-  justify-content: center;
+    justify-content: center;
+    
 }
 
 img {
@@ -104,7 +76,6 @@ img {
     width: 100%;
     padding: 10px;  
 }
-
 
 .anim{
     width: 100%;
@@ -115,6 +86,7 @@ img {
     /* centrar contenedor*/
 
 }
+
 .anim figure{  /* tama;o de la imagen*/
     position:relative;
      height: 250px;
@@ -132,6 +104,7 @@ img {
     will-change: transform;
     
 }
+
 .anim figure .capa{
     position: absolute;
     top: 0;
@@ -149,10 +122,12 @@ img {
     opacity: 1;
     visibility: visible;
 }
+
 .contenedor figure:hover > .capa h3{
     margin-top: 70px;
     margin-bottom: 15px;
 }
+
 .anim figure:hover > img{
     transform: scale(1.3);
 }
@@ -173,9 +148,6 @@ img {
     margin: auto;
 }
 
-    
-
-
 .columna2 {
     float: left;
     width: 50%; /* espacio entre no hace nd*/
@@ -183,7 +155,6 @@ img {
     justify-content: center;
     align-items: center;  
 }
-
 
 .fila2::after {
     content: "";
@@ -268,55 +239,8 @@ img {
 }
 
 
-/* Estilo para la sección "Calidad en BellAroma" */
-.calidad-text {
-  font-family: 'Brush Script MT', sans-serif;
-  font-weight: bold;
-  padding: 5%;
-  font-size: 4vw; /* Utiliza vw para un tamaño de fuente relativo al ancho de la pantalla */
-  color: #ce69a9;
-}
 
-/* Estilos responsivos para la sección de imágenes */
-.anim figure {
-  position: relative;
-  height: 250px;
-  cursor: pointer;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
-}
 
-.anim figure img {
-  width: 100%;
-  height: 100%;
-  transition: all 400ms ease-out;
-  will-change: transform;
-}
-
-.anim figure .capa {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 103, 123, 0.7);
-  transition: all 400ms ease-out;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-}
-
-.anim figure:hover > .capa {
-  opacity: 1;
-  visibility: visible;
-}
-
-.anim figure:hover > img {
-  transform: scale(1.3);
-}
-
-.anim figure .capa h3,
 .anim figure .capa p {
   color: #fff;
   transition: all 400ms ease-out;
@@ -335,84 +259,17 @@ img {
   }
 }
 
-/* Resto de tu código... */
 
 
-/* Estilo para la sección "Calidad en BellAroma" */
-.calidad-text {
-    font-family: 'Brush Script MT', sans-serif;
-    font-weight: bold;
-    padding: 5%;
-    font-size: 4vw; /* Utiliza vw para un tamaño de fuente relativo al ancho de la pantalla */
-    color: #ce69a9;
-}
 
-/* Estilos responsivos para la sección de imágenes */
-.anim figure {
-    position: relative;
-    height: 250px;
-    cursor: pointer;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
-}
-
-.anim figure img {
-    width: 100%;
-    height: 100%;
-    transition: all 400ms ease-out;
-    will-change: transform;
-}
-
-.anim figure .capa {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 103, 123, 0.7);
-    transition: all 400ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-}
-
-.anim figure:hover > .capa {
-    opacity: 1;
-    visibility: visible;
-}
-
-.anim figure:hover > img {
-    transform: scale(1.2); /* Ajusta la escala para hacer las imágenes un poco más grandes al pasar el ratón sobre ellas */
-}
-
-.anim figure .capa h3,
-.anim figure .capa p {
-    color: #fff;
-    transition: all 400ms ease-out;
-    margin: 0;
-}
-
-/* Media queries para ajustar estilos en dispositivos más pequeños */
-@media (max-width: 768px) {
-    .calidad-text {
-        font-size: 6vw;
-    }
-
-    .anim figure {
-        height: auto;
-        margin-bottom: 15px; /* Agrega un margen entre las imágenes en dispositivos más pequeños */
-    }
-}
-
-/* Resto de tu código... */
+/*... */
 /* Estilo para la sección "Calidad en BellAroma" */
 .calidad-text {
   font-family: 'Brush Script MT', sans-serif;
   font-weight: bold;
   padding: 5%;
   font-size: 4vw; /* Utiliza vw para un tamaño de fuente relativo al ancho de la pantalla */
-  color: #ce69a9;
+  color: rgb(0, 0, 0);
 }
 
 /* Estilos responsivos para la sección de imágenes */
@@ -461,10 +318,10 @@ img {
   margin: 0;
 }
 
-/* Media queries para ajustar estilos en dispositivos más pequeños */
+/* 768 Media queries para ajustar estilos en dispositivos más pequeños */
 @media (max-width: 768px) {
   .calidad-text {
-      font-size: 6vw;
+      font-size: 5vw;
   }
 
   .anim figure {
@@ -473,4 +330,16 @@ img {
   }
 }
 
-/* Resto de tu código... */
+/* Agrega estilos personalizados según sea necesario */
+.card {
+  /* Tus estilos personalizados aquí */
+}
+
+.card-body {
+  /* Tus estilos personalizados aquí */
+}
+
+
+
+
+

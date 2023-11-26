@@ -1,25 +1,39 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #0d48af67; color: #ce2828;">
+<nav class="navbar navbar-expand-lg" style="background-color: #ffffff67; color: #ce2828;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home" style="color: #9a1010;">
-      <img src="../assets/perfume.png" alt="Bootstrap" width="70" height="60"> BELLAROMA
+    <a class="navbar-brand" href="/home" style="color: #040404; ">
+      <img src="../assets/logo.png" alt="Bootstrap" width="40%" height="60"><strong>BELLAROMA</strong>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/productos">Perfumes</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/contacto">Contacto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/quienes-somos">Quienes Somos</a>
-        </li>      
+        </li>
+
+        <!-- Nuevo ítem de menú desplegable para perfumes
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">Perfumes</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/perfumes-mujer">Perfumes de Mujer</a></li>
+            <li><a class="dropdown-item" href="/perfumes-hombre">Perfumes de Hombre</a></li>
+            <li><a class="dropdown-item" href="/sets-perfumes">Sets de Perfumes</a></li>
+          </ul>
+        </li> -->
+        <div class="ml-auto ms-3 d-flex flex-row align-items-center">
+          <a href="/login" class="btn btn-outline-secondary me-md-2" type="button">Inicio</a>
+          <a href="/register" class="btn btn-outline-secondary me-md-2" type="button">Registro</a>
+        </div>
       </ul>
     </div>
   </div>
